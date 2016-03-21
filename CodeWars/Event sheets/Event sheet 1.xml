@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="MoveDist" sid="5540167857731963" static="0" type="number">0</variable>
+        <variable constant="0" name="MoveDirec" sid="7829199088304319" static="0" type="text"></variable>
+        <event-block disabled="1" sid="3853749908375796">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2152885626283131" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7771855908512913" type="Tank">
+                    <param id="0" name="Speed">32/tank.MoveTime</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5645127756485545" type="Tank">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="5205954326589743" type="Tank">
+                    <param id="0" name="Duration">Tank.MoveTime</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7966031158837847">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="9391055017196437" type="Tank">
+                    <param id="0" name="Tag">&quot;Move&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="8941715499622183" type="Tank">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9826969222602567">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3096617302714005" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set focused" sid="8841272159623316" type="Input" />
+                <action id="7" name="Set CSS style" sid="780426988475634" type="Input">
+                    <param id="0" name="Property name">&quot;border-style&quot;</param>
+                    <param id="1" name="Value">&quot;none&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="7593116264468986" type="Input">
+                    <param id="0" name="Property name">&quot;outline-style&quot;</param>
+                    <param id="1" name="Value">&quot;none&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="3243910407934788" type="Input">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0,0,0,0)&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="6490559869309685" type="InputDisplay">
+                    <param id="0" name="Text">&quot;&gt;&quot; &amp; Input.Text</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="8447682695984532" type="Input">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0,0,0,0)&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="9960830394492752" title="Unit Selection" />
+        <event-block sid="504112969782864">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1519553454770092" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="0" inverted="1" name="Compare text" sid="6634543398544259" type="Input">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2836546187817438" type="Parser">
+                    <param id="0" name="Text">Input.Text</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1383715220371346" type="Arrow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="5884466710246468" type="Input">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1147286335023293">
+            <conditions>
+                <condition id="-35" name="Test regex" sid="7838150099713294" type="System">
+                    <param id="0" name="String">Input.Text</param>
+                    <param id="1" name="Regex">&quot;^&quot; &amp; Tank.Name &amp; &quot;\.&quot;</param>
+                    <param id="2" name="Flags">&quot;gi&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2323304121321282" type="Arrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="2807300813373119" type="Arrow">
+                    <param id="0" name="X">Tank.X</param>
+                    <param id="1" name="Y">Tank.Y - 32</param>
+                </action>
+                <action behavior="Flash" disabled="1" id="0" name="Flash" sid="2991688866216134" type="Arrow">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action disabled="1" id="-17" name="Move forward" sid="263690310890996" type="Tank">
+                    <param id="0" name="Distance">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9612061049987382">
+            <conditions>
+                <condition id="0" name="Compare text" sid="5407192422369133" type="Input">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="922879106370387" type="Arrow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="3032915362875293" title="Movement" />
+        <event-block sid="927907688266531">
+            <conditions>
+                <condition id="-35" name="Test regex" sid="8301854143106524" type="System">
+                    <param id="0" name="String">Parser.Text</param>
+                    <param id="1" name="Regex">&quot;^&quot; &amp; Tank.Name &amp; &quot;\.move\(([\w]+)\)&quot;</param>
+                    <param id="2" name="Flags">&quot;gi&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-17" name="Move forward" sid="1175640620892106" type="Tank">
+                    <param id="0" name="Distance">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="9750689702353725" type="System">
+                    <param id="0" name="Variable">MoveDirec</param>
+                    <param id="1" name="Value">RegexMatchAt(Parser.Text, &quot;^&quot; &amp; Tank.Name &amp; &quot;\.move\(([\w]+),?\s*(\d+)*\)&quot;, &quot;i&quot;, 1)</param>
+                </action>
+                <action id="0" name="Set text" sid="8038875283465484" type="Output">
+                    <param id="0" name="Text">Parser.Text</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="577456326258796">
+                    <conditions>
+                        <condition id="-35" name="Test regex" sid="4671374819560527" type="System">
+                            <param id="0" name="String">Parser.Text</param>
+                            <param id="1" name="Regex">&quot;^&quot; &amp; Tank.Name &amp; &quot;\.move\(([\w]+),\s*(\d+)*\)&quot;</param>
+                            <param id="2" name="Flags">&quot;gi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="182570937518515" type="System">
+                            <param id="0" name="Variable">MoveDist</param>
+                            <param id="1" name="Value">RegexMatchAt(Parser.Text, &quot;^&quot; &amp; Tank.Name &amp; &quot;\.move\(([\w]+),?\s*(\d+)*\)&quot;, &quot;i&quot;, 2)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4127462623347261">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2697839452434828" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="7628119138591168" type="Tank">
+                                    <param id="0" name="Angle">180</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="322494744475365" type="Tank">
+                                    <param id="0" name="Speed">(32 * MoveDist)/tank.MoveTime</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8200955971739563" type="Tank">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="2575870382439348" type="Tank">
+                                    <param id="0" name="Duration">Tank.MoveTime</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2724634096431846" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761628747073192">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3016041950331411" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="8304003446208989" type="Tank">
+                                    <param id="0" name="Angle">0</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="4086669088056755" type="Tank">
+                                    <param id="0" name="Speed">(32 * MoveDist)/tank.MoveTime</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1926920610770654" type="Tank">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="3568493215696895" type="Tank">
+                                    <param id="0" name="Duration">Tank.MoveTime</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6594006262342214" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1644492232824475">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="25791337665073" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="3592104542394481" type="Tank">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4091595223673372" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5380336096940198">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1391320716870218" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="9349856526582973" type="Tank">
+                                    <param id="0" name="Angle">270</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8329362021924691" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5387942382463381">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3677201320852726" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6678951005415343">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6701740400744987" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="6679875174167447" type="Tank">
+                                    <param id="0" name="Angle">180</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="9181069196148963" type="Tank">
+                                    <param id="0" name="Speed">32/tank.MoveTime</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4687456445371488" type="Tank">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="6754196078090771" type="Tank">
+                                    <param id="0" name="Duration">Tank.MoveTime</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4540125386577618" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3710128540787929">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8703590089656743" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="7668937768817054" type="Tank">
+                                    <param id="0" name="Angle">0</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="4221057626755384" type="Tank">
+                                    <param id="0" name="Speed">32/tank.MoveTime</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2525213254811329" type="Tank">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="8449574646330182" type="Tank">
+                                    <param id="0" name="Duration">Tank.MoveTime</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4186483945593857" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5990805775910804">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3641799128091581" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="4754004188283482" type="Tank">
+                                    <param id="0" name="Angle">270</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="6962302946715428" type="Tank">
+                                    <param id="0" name="Speed">32/tank.MoveTime</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="242009415055793" type="Tank">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="6529871681166587" type="Tank">
+                                    <param id="0" name="Duration">Tank.MoveTime</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2881367388313214" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="91637888060842">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3344455316941524" type="System">
+                                    <param id="0" name="Variable">MoveDirec</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-23" name="Move at angle" sid="9991791080585327" type="Tank">
+                                    <param id="0" name="Angle">90</param>
+                                    <param id="1" name="Distance">32</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="5088572272838059" type="Tank">
+                                    <param id="0" name="Speed">32/tank.MoveTime</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3322333013954381" type="Tank">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="3189777430964735" type="Tank">
+                                    <param id="0" name="Duration">Tank.MoveTime</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Move&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6772581721801902" type="Parser">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="9007401028769505" title="Logger" />
+    </events>
+</c2eventsheet>

@@ -1,0 +1,23 @@
+{
+  "name": "test-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "webpack-dev-server --progress --colors --host 0.0.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^5.0.12",
+    "babel-loader": "^5.0.0",
+    "webpack": "^1.8.4"
+  },
+  "dependencies": {
+    "combokeys": "^2.4.3",
+    "esprima": "^2.2.0",
+    "event-emitter": "^0.3.3",
+    "react": "^0.13.1"
+  }
+}

@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 960px;
+  height: 640px;
+  margin: 20px auto 0 auto;
+
+  background-color: #5cabea;
+}
+
+#code-rescue {
+  position: absolute;
+  z-index: 2;
+  top: 162px;
+  left: 0;
+}
+#ii {
+  position: absolute;
+  z-index: 3;
+  top: 162px;
+  right: 0;
+
+  -webkit-animation: moveii 2.2s linear forwards;
+     -moz-animation: moveii 2.2s linear forwards;
+       -o-animation: moveii 2.2s linear forwards;
+}
+
+#clouds-back {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: moveclouds 2s linear forwards;
+     -moz-animation: moveclouds 2s linear forwards;
+       -o-animation: moveclouds 2s linear forwards;
+}
+#clouds-front {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: moveclouds 2s linear forwards;
+     -moz-animation: moveclouds 2s linear forwards;
+       -o-animation: moveclouds 2s linear forwards;
+}
+/**
+ * ANIMATIONS
+ */
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -1360px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -1360px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -1360px;
+  }
+}
+@keyframes moveclouds {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -1360px;
+  }
+}
+
+@-webkit-keyframes moveii {
+  0% {
+    margin-right: -3000px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@-moz-keyframes moveii {
+  0% {
+    margin-right: -3000px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@-o-keyframes moveii {
+  0% {
+    margin-right: -3000px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@keyframes moveii {
+  0% {
+    margin-right: -3000px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}

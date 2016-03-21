@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>CodeWars</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>ipfc2wt45i3m</unique-id>
+    <saved-with-version>20000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>960</width>
+        <height>640</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Tank" sid="4220827559290396">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MoveTime" sid="8242192701172394" type="number" />
+                <instance-variable name="Name" sid="1858471525451334" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="7145904584717102">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="1573524182751899">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="195772356753185">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8842223321041464" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Downloads\Tank.png">
+                        <collision-poly>
+                            <point x="0.03125" y="1" />
+                            <point x="0.03125" y="0.36" />
+                            <point x="0.59375" y="0.36" />
+                            <point x="0.59375" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Grass" sid="7209424837785336">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Andy\Downloads\Grass.png" />
+        </object-type>
+        <object-type name="TextBox" sid="6128679428712529">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9685110665717556" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Border" sid="9897506733102471">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9012563435375949" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CL" sid="172289568534036">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ExecutingTutorial" sid="9744587733553074">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TankCreation" sid="1924799562616978">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="StartAssistant" sid="4076887159568718">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Border2" sid="5541741127353115">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6412650138362361" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Border3" sid="3438425116435363">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8397771609856598" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Clippy" sid="509517939432007">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="612269783596144" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Downloads\clippy.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ClippyMessage" sid="2515010478420087">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ClippyMessage2" sid="9889513144975172">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CL2" sid="6124640667985464">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ClippyMessage3" sid="9143676428916008">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MoveTank" sid="665687915856064">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Tank2" sid="6845306296932963">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="4505478261207867">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2448197797303218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Andy\Downloads\Tank.png">
+                        <collision-poly>
+                            <point x="0.96875" y="0" />
+                            <point x="0.96875" y="0.64" />
+                            <point x="0.40625" y="0.64" />
+                            <point x="0.40625" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arrow" sid="5110583794549844">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="8646786453952959">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="718618707226845">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="443905827756582" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ClippyMessage4" sid="3783932247231858">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ClippyMessage5" sid="9181333161792188">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="MoveTank2" sid="1423401561486369">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Border4" sid="5274134195111393">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6433147697075059" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Border5" sid="9678741009686597">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4246599829319229" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="9873950513745098">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ClippyMessage6" sid="2797552202574772">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="1231214078843976">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7387260212201067" speed="5">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.5" original-source="C:\Users\Andy\Downloads\Factory.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.21875" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.25" y="0.78125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="4074126715126384">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9902565330048567" speed="5">
+                    <frame duration="1" hotspotX="0.352941" hotspotY="4.23333" original-source="C:\Users\Andy\Downloads\Buildings.gif" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CL3" sid="2457336315690972">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Keyboard" sid="9612824821925052">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Input" sid="9966891330363092">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Output" sid="9110528925197502">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Andy\Downloads\GreenSpriteFont.png" />
+        </object-type>
+        <object-type name="Text2" sid="4378295393880711">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Parser" sid="6677361525220862">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="InputDisplay" sid="1039540282423024">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Andy\Downloads\GreenSpriteFont.png" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Tutorial_unitcreation.xml</layout>
+        <layout>Tutorial1.xml</layout>
+        <layout>Gameplay .xml</layout>
+        <layout>Tutorial_loops.xml</layout>
+        <layout>Tutorial_condition.xml</layout>
+        <layout>Tutorial2.xml</layout>
+        <layout>Tutorial3.xml</layout>
+        <layout>Tutorial4.xml</layout>
+        <layout>Tutorial5.xml</layout>
+        <layout>Tutorial_combat.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="149" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

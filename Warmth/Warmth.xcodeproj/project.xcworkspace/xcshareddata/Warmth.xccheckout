@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C41DA628-CFB5-4696-94B1-B7B2BEDAF30C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Warmth</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7FC0F0C68284669CC384074FF49563E16324BCAE</key>
+		<string>https://github.com/Theta1/CS161.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Warmth/Warmth.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7FC0F0C68284669CC384074FF49563E16324BCAE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Theta1/CS161.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7FC0F0C68284669CC384074FF49563E16324BCAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7FC0F0C68284669CC384074FF49563E16324BCAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS161</string>
+		</dict>
+	</array>
+</dict>
+</plist>
